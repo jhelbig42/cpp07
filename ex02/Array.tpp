@@ -42,7 +42,7 @@ Array<T>::~Array( void ){
 }
 
 template<typename T>
-T& Array<T>::operator[]( size_t idx ) const {
+T& Array<T>::operator[]( unsigned int idx ) const {
     if (idx >= this->_size)
         throw Array<T>::InvalidIndexException();
     return (this->_arr[idx]);

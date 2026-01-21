@@ -11,7 +11,7 @@ int main(int, char**)
     srand(time(NULL));
     for (int i = 0; i < MAX_VAL; i++)
     {
-        const int value = rand();
+        int value = rand();
         numbers[i] = value;
         mirror[i] = value;
     }

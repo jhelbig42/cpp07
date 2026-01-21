@@ -14,25 +14,22 @@ void capitalize(std::string &str){
         str[0] = str[0] - 32;
 }
 
-void print_int(int a){
-    std::cout << a << " ";
-}
-
-void print_string(std::string a){
+template<typename T>
+void print(T& a){
     std::cout << a << " ";
 }
 
 int main(void){
     int arr1[] = {7, 11, 13, 1001, 77};
     iter(arr1, 5, increment);
-    iter(arr1, 5, print_int);
+    iter(arr1, 5, print<int>);
     std::cout << std::endl;
     iter(arr1, 5, decrement2);
-    iter(arr1, 5, print_int);
+    iter(arr1, 5, print<int>);
     std::cout << std::endl;
 
     std::string arr2[] ={"hi", "there", "why", "?"};
     iter(arr2, 4, capitalize);
-    iter(arr2, 4, print_string);
+    iter(arr2, 4, print<std::string>);
     std::cout << std::endl;
 }

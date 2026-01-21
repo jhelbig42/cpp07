@@ -15,7 +15,7 @@ class Array{
         Array& operator=( const Array &other );
         ~Array( void );
         
-        T& operator[]( size_t idx ) const ;
+        T& operator[]( unsigned int idx ) const ;
         
         unsigned int size( void ) const;
 
